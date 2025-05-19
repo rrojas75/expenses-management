@@ -1,0 +1,14 @@
+.login-container {
+    height: 100vh;
+    background: linear-gradient(135deg, #6e8efb 0%, #a777e3 100%);
+  }
+  
+  .login-card {
+    max-width: 400px;
+    width: 100%;
+    background: #ffffff;
+    animation: fadeIn 0.5s ease-in-out;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+  
