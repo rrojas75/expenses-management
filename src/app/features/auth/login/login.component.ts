@@ -1,6 +1,6 @@
-import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
-import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { Component, inject } from '@angular/core';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,17 +10,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
-
   router = inject(Router);
 
   loginForm: FormGroup = inject(FormBuilder).group({
     email: ['', [Validators.required, Validators.email]],
-    password: ['', [Validators.required, Validators.minLength(6)]]
+    password: ['', [Validators.required, Validators.minLength(6)]],
   });
-
+  
   onSubmit() {
     if (this.loginForm.valid) {
-      localStorage.setItem('token', this.loginForm.value)
+      localStorage.setItem('token', this.loginForm.value);
       this.router.navigate(['/dashboard']);
     } else {
       console.log('Invalid Form');
