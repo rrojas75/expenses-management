@@ -6,7 +6,7 @@ import { provideStore } from '@ngrx/store';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
 import { routes } from './app.routes';
 import { appEffects, appReducers } from './app.state';
-import { tokenInterceptor } from './core/interceptors/token-interceptor';
+import { tokenInterceptor } from './core/interceptors/token.interceptor';
 
 export const appConfig: ApplicationConfig = {
   providers: [
